@@ -21,7 +21,7 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
-            _player = new Player(10, 10, 20, 0, 1);
+            _player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
 
@@ -78,7 +78,7 @@ namespace SuperAdventure
             //Heal Player
             _player.CurrentHP = _player.MaximumHP;
 
-            lblHP.Text = _player.CurrentHP.ToString();
+            UpdatePlayerStats();
 
             //Does location have quest
             if (newLocation.QuestAvailableHere != null)
@@ -123,6 +123,8 @@ namespace SuperAdventure
 
                             //Mark Quest as completed
                             _player.MarkQuestCompleted(newLocation.QuestAvailableHere);
+
+                            UpdatePlayerStats();
                         }
                     }
                 }
@@ -197,6 +199,14 @@ namespace SuperAdventure
 
             //Refresh Player's potions comboBox
             UpdatePotionListInUI();
+        }
+
+        private void UpdatePlayerStats()
+        {
+            lblHP.Text = _player.CurrentHP.ToString() + "/" + _player.MaximumHP.ToString();
+            lblGold.Text = _player.Gold.ToString();
+            lblXP.Text = _player.XP.ToString();
+            lblLevel.Text = _player.Level.ToString();
         }
 
         private void UpdateInventoryListInUI()
@@ -332,7 +342,7 @@ namespace SuperAdventure
             _player.CurrentHP -= damageToPlayer;
 
             //Refresh player data UI
-            lblHP.Text = _player.CurrentHP.ToString();
+            UpdatePlayerStats();
         }
 
         private void MonsterRewards(Monster monster)
@@ -402,12 +412,9 @@ namespace SuperAdventure
             if (_currentMonster.CurrentHP <= 0)
             {
                 MonsterRewards(_currentMonster);
-                
+
                 //Refresh player info and inventory
-                lblHP.Text = _player.CurrentHP.ToString();
-                lblGold.Text = _player.Gold.ToString();
-                lblXP.Text = _player.XP.ToString();
-                lblLevel.Text = _player.Level.ToString();
+                UpdatePlayerStats();
 
                 UpdateInventoryListInUI();
                 UpdateWeaponListInUI();
@@ -439,6 +446,7 @@ namespace SuperAdventure
 
         }
 
+
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
             //Get currently selected potion from combobox
@@ -468,7 +476,6 @@ namespace SuperAdventure
             ScrollToBottom();
 
             //Monster Turn
-
             MonsterDamageCalc(_currentMonster);
             
             if (_player.CurrentHP <= 0)
@@ -482,7 +489,7 @@ namespace SuperAdventure
             }
 
             //Refresh player info and inventory
-            lblHP.Text = _player.CurrentHP.ToString();
+            UpdatePlayerStats();
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }

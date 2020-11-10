@@ -11,17 +11,19 @@ namespace Engine
     {
         public int Gold { get; set; }
         public int XP { get; set; }
-        public int Level { get; set; }
+        public int Level 
+        {
+            get { return ((XP / 100) + 1); }
+        }
         public Location CurrentLocation { get; set; }
         public List<InventoryItem> Inventory { get; set; }
         public List<PlayerQuest> Quests { get; set; }
 
-        public Player(int currentHP, int maximumHP, int gold, int xp, int level)
+        public Player(int currentHP, int maximumHP, int gold, int xp)
             : base(currentHP, maximumHP)
         {
             Gold = gold;
             XP = xp;
-            Level = level;
 
             Inventory = new List<InventoryItem>();
             Quests = new List<PlayerQuest>();

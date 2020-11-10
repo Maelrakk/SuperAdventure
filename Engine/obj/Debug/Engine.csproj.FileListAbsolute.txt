@@ -4,3 +4,9 @@ C:\Users\antho\source\repos\Engine\obj\Debug\Engine.csprojAssemblyReference.cach
 C:\Users\antho\source\repos\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
 C:\Users\antho\source\repos\Engine\obj\Debug\Engine.dll
 C:\Users\antho\source\repos\Engine\obj\Debug\Engine.pdb
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\bin\Debug\Engine.dll
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\bin\Debug\Engine.pdb
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Debug\Engine.dll
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Debug\Engine.pdb
