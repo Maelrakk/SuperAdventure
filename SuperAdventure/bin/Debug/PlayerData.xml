@@ -1,0 +1,1 @@
+<Player><Stats><CurrentHP>10</CurrentHP><MaximumHP>10</MaximumHP><Gold>20</Gold><XP>0</XP><CurrentLocation>Engine.Location</CurrentLocation></Stats><InventoryItems><InventoryItem ID="1" Quantity="1" /><InventoryItem ID="1" Quantity="1" /></InventoryItems><PlayerQuests><PlayerQuest ID="1" IsCompleted="False" /></PlayerQuests></Player>

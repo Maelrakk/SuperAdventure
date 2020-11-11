@@ -3,3 +3,8 @@ C:\Users\antho\source\repos\Engine\bin\Release\Engine.pdb
 C:\Users\antho\source\repos\Engine\obj\Release\Engine.csproj.CoreCompileInputs.cache
 C:\Users\antho\source\repos\Engine\obj\Release\Engine.dll
 C:\Users\antho\source\repos\Engine\obj\Release\Engine.pdb
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\bin\Release\Engine.dll
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\bin\Release\Engine.pdb
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Release\Engine.csproj.CoreCompileInputs.cache
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Release\Engine.dll
+C:\Users\antho\Git\Projects\SuperAdventure\Engine\obj\Release\Engine.pdb
